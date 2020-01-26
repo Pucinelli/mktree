@@ -1,8 +1,16 @@
 {
-  "name": "mktree",
-  "version": "0.8.0",
-  "description": "mktree CLI",
-  "private": true,
+  "name": "mktree-cli",
+  "version": "0.8.2",
+  "description": "Build entire directory structures with ease.",
+  "author": {
+    "name": "Gabriel Pucinelli",
+    "email": "gabrielpucinelli@protonmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/Pucinelli/mktree"
+  },
+  "main": "build/cli.js",
+  "private": false,
   "types": "build/types/types.d.ts",
   "bin": {
     "mktree": "bin/mktree"
@@ -31,10 +39,11 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@types/js-yaml": "^3.12.2",
+    "js-yaml": "latest",
     "gluegun": "latest"
   },
   "devDependencies": {
+    "@types/js-yaml": "^3.12.2",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.11",
     "jest": "^24.1.0",

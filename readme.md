@@ -1,6 +1,13 @@
-# mktree
+# mktree-cli
 
 Build entire directory structures with ease.
+
+## Instalation
+
+To use it as a CLI, you can install it globally with `npm i mktree-cli -g` or `yarn global add mktree-cli`.
+Alternatively, you can use it with npx, just as in `npx mktree-cli <your_file>`.
+
+_You don't need to install it globally if you want to use mktree as code._
 
 ## About
 
