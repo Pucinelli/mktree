@@ -1,0 +1,8 @@
+Redux
+├── Actions
+│  └── GenericAction.js
+├── Reducers
+│  ├── GenericReducer.js
+│  └── Reducers.js
+└── Store
+   └── DefaultStore.js

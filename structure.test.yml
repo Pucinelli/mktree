@@ -1,0 +1,42 @@
+- Redux:
+    - Actions:
+        - GenericAction.js: |
+            const genericAction = values => dispatch =>
+              dispatch({
+                type: 'GENERIC_ACTION',
+                payload: values
+              });
+
+            export { genericAction };
+    - Reducers:
+        - GenericReducer.js: |
+            import { generic } from '../Store/DefaultStore';
+
+            const GenericReducer = (store = generic, action) => {
+              switch (action.type) {
+                case 'GENERIC_ACTION':
+                  return { ...store, ...action.payload };
+
+                default:
+                  return store;
+              }
+            };
+
+            export default GenericReducer;
+        - Reducers.js: |
+            import { combineReducers } from 'redux';
+            import genericReducer from '../Reducers/GenericReducer';
+
+            const Reducers = combineReducers({
+              generic: genericReducer
+            });
+
+            export default Reducers;
+    - Store:
+        - DefaultStore.js: |
+            const generic = {
+              data: null,
+              otherData: null
+            };
+
+            export { generic };
